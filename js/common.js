@@ -5,20 +5,23 @@ $(document).ready(function(){
         $('.overlay').toggleClass('open');
     });
     
-    //about 그래프
-    $(window).on('scroll', function(){
-        var resumeTop = $('#resume').offset().top-150,
-         scrollTop = $(window).scrollTop();
-        if( resumeTop <= scrollTop ){
-                $('#about .graph.coding .bar').css('width','95%')
-                $('#about .graph.photoshop .bar').css('width','90%')
-                $('#about .graph.illust .bar').css('width','80%')
-                $('#about .graph.word .bar').css('width','90%')
-                $('#about .graph.editplus .bar').css('width','95%')
-                $('#about .graph.brackets .bar').css('width','95%')
-                $('#about .graph.github .bar').css('width','85%')
-           }
-    });
+    //about
+    if( $('#resume').length > 0 ){
+        $(window).on('scroll', function(){
+            var resumeTop = $('#resume').offset().top-150,
+             scrollTop = $(window).scrollTop();
+            if( resumeTop <= scrollTop ){
+                    $('#about .graph.coding .bar').css('width','95%')
+                    $('#about .graph.photoshop .bar').css('width','90%')
+                    $('#about .graph.illust .bar').css('width','80%')
+                    $('#about .graph.word .bar').css('width','90%')
+                    $('#about .graph.editplus .bar').css('width','95%')
+                    $('#about .graph.brackets .bar').css('width','95%')
+                    $('#about .graph.github .bar').css('width','85%')
+               }
+        }); 
+    };
+    
     
     /* work slick */
     var $slickElement = $('.work_slide_for');
