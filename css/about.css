@@ -52,7 +52,7 @@ RESUME CSS
 반응형 CSS
 --------------------------------- */
 /* 태블릿 */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 760px){
     #about{width: 740px; margin: 0 auto;}
     #about #intro .cate{transform: rotate(0deg); margin-left: 0px;}
     #about #intro .top_wrap{display: flex; margin-top: 0;}
